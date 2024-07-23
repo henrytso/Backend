@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "b6f6e352-42f3-425b-9d71-6af2ac1a101b",
+		"name": "pa2-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5773362"
+	},
+	"item": [
+		{
+			"name": "GetAllTasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/tasks/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"1. cook dinner\",\n    \"done\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/tasks/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"updated description\",\n    \"done\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/tasks/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/tasks/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
